@@ -1,2 +1,6 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+In filter=lfs diff=lfs merge=lfs -text
+RealtimeAssetsPluginsonnxruntime_providers_cuda.dll filter=lfs diff=lfs merge=lfs -text
+C:UsersLukasDesktopLostInRealTimeLost_in_RealtimeLost filter=lfs diff=lfs merge=lfs -text
+*.dll filter=lfs diff=lfs merge=lfs -text
