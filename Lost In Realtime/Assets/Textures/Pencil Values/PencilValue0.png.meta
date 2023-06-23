@@ -130,10 +130,10 @@ TextureImporter:
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
-  userData: 'TexArr_textureArray_asAlpha:d9fa1c40dc23b4128bc42681b7856312
+  userData: 'Hash:11dd64a48e8ef9fe16fb9e16a529c709
 
-    Hash:11dd64a48e8ef9fe16fb9e16a529c709
+    TexArr_textureArray_asSource:2299afe3c40833f42af3291830dbd430,d9fa1c40dc23b4128bc42681b7856312,bca519552287640978007812f2e829fe
 
-    TexArr_textureArray_asSource:d9fa1c40dc23b4128bc42681b7856312'
+    TexArr_textureArray_asAlpha:bca519552287640978007812f2e829fe'
   assetBundleName: 
   assetBundleVariant: 
