@@ -59,6 +59,14 @@ public class FlickeringEmissive : MonoBehaviour
                 Materials[i].SetColor(EMISSIVE_COLOR_NAME, color);
             }
         }
-        
+
+   
+    }
+
+    IEnumerator TurnOffCoroutine()
+    {
+        //yield on a new YieldInstruction that waits for 115 seconds.
+        yield return new WaitForSeconds(115);
+        Flicker = false;
     }
 }
