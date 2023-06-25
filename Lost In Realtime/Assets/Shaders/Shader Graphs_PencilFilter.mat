@@ -62,13 +62,13 @@ Material:
     m_Floats:
     - Vector1_2C24E34A: 4.76
     - Vector1_3DF14B29: 0
-    - Vector1_4FF13AB0: 2
+    - Vector1_4FF13AB0: 1
     - Vector1_632EADB7: 7
     - Vector1_7E9261B2: 0.05
-    - Vector1_9D9EFD0D: 1
+    - Vector1_9D9EFD0D: 1.09
     - Vector1_EFC063D5: 0.334
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
-    - Vector2_8F4F7BC: {r: 8, g: 8, b: 0, a: 0}
+    - Vector2_8F4F7BC: {r: 16, g: 9, b: 0, a: 0}
   m_BuildTextureStacks: []
