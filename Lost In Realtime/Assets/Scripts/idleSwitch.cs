@@ -8,10 +8,20 @@ public class idleSwitch : MonoBehaviour
     [SerializeField] private AudioSource idleSound;
     [SerializeField] private AudioSource track96;
     [SerializeField] private Animator cameraPath;
+    [SerializeField] private Animator sinkingHands;
+    [SerializeField] private Animator doors;
 
     [SerializeField] private GameObject workers;
     [SerializeField] private GameObject workersOutside;
     [SerializeField] private GameObject workersUpstairs;
+
+    [SerializeField] private GameObject outsideGoals;
+
+    [SerializeField] private GameObject goal1;
+    [SerializeField] private GameObject goal2;
+    [SerializeField] private GameObject goal3;
+    [SerializeField] private GameObject goal4;
+    [SerializeField] private GameObject goal5;
 
     [SerializeField] private GameObject screen;
     private Material screenMaterial;
@@ -45,6 +55,7 @@ public class idleSwitch : MonoBehaviour
 
                 cameraPath.SetTrigger("audioSwitched");
                 StartCoroutine(WorkerCoroutine());
+                doors.SetTrigger("audioSwitched");
             }
         }
         
@@ -70,6 +81,17 @@ public class idleSwitch : MonoBehaviour
         screenMaterial.SetColor("_Color", Color.black);
         screenMaterial.DisableKeyword("_EMISSION");
         Debug.Log("Emission off");
+        
+        yield return new WaitForSeconds(2);
+        sinkingHands.SetTrigger("sink");
+
+        goal1.SetActive(false);
+        goal2.SetActive(false);
+        goal3.SetActive(false);
+        goal4.SetActive(false);
+        goal5.SetActive(false);
+        outsideGoals.SetActive(true);
+
     }
 }
 
