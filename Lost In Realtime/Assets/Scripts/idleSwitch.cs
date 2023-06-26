@@ -10,6 +10,7 @@ public class idleSwitch : MonoBehaviour
     [SerializeField] private Animator cameraPath;
     [SerializeField] private Animator sinkingHands;
     [SerializeField] private Animator doors;
+    [SerializeField] private Animator curtain;
 
     [SerializeField] private GameObject workers;
     [SerializeField] private GameObject workersOutside;
@@ -91,6 +92,9 @@ public class idleSwitch : MonoBehaviour
         goal4.SetActive(false);
         goal5.SetActive(false);
         outsideGoals.SetActive(true);
+
+        yield return new WaitForSeconds(30);
+        curtain.SetTrigger("open");
 
     }
 }
