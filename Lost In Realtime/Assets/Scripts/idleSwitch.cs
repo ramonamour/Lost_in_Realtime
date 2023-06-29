@@ -11,6 +11,8 @@ public class idleSwitch : MonoBehaviour
     [SerializeField] private Animator sinkingHands;
     [SerializeField] private Animator doors;
     [SerializeField] private Animator curtain;
+    
+    [SerializeField] private Animator teleporter;
 
     [SerializeField] private GameObject workers;
     [SerializeField] private GameObject workersOutside;
@@ -55,6 +57,7 @@ public class idleSwitch : MonoBehaviour
                 switchOn = false;
 
                 cameraPath.SetTrigger("audioSwitched");
+                teleporter.SetTrigger("startTeleport");
                 StartCoroutine(WorkerCoroutine());
                 doors.SetTrigger("audioSwitched");
             }
