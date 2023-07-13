@@ -287,7 +287,7 @@ Material:
     - _AlphaCutoffEnable: 1
     - _AlphaDstBlend: 0
     - _AlphaSrcBlend: 1
-    - _BareBrightness: 1.16
+    - _BareBrightness: 1.22
     - _BareConcreteRange: 0.66243684
     - _BareConcreteSmooth: 0.34628615
     - _BareSmoothness: 0.441
@@ -301,8 +301,8 @@ Material:
     - _ColorTheme1: 1.1163812
     - _ColorTheme2: 0
     - _ColorThemeSel: 0
-    - _ConcreteBareRange: 0.244
-    - _ConcreteBareSmooth: 0.559
+    - _ConcreteBareRange: 0.183
+    - _ConcreteBareSmooth: 1
     - _ConcreteBareSmoothness: 0.64473736
     - _ConcreteDamageScale: 1.458
     - _ConcreteDamageTiling: 2.95
@@ -320,7 +320,7 @@ Material:
     - _DamageAmount: 0
     - _DamageAmount1: 1
     - _DamageAmountInside: 0.88
-    - _DamageAmountSmooth: 6.7
+    - _DamageAmountSmooth: 5
     - _DamageAmountTiling: 4.141967
     - _DamageBrightness: 3.1
     - _DamageBrigthness: 3.01
@@ -328,7 +328,7 @@ Material:
     - _DamageMultiplier1: 0.6878818
     - _DamageScale: 1.1935546
     - _DamageSize: 0
-    - _DamageSmoothness: 0.366
+    - _DamageSmoothness: 0.305
     - _DamageSmoothness1: 75.3
     - _DamageSmoothnessIn: 100
     - _DamageSmoothnessInside: 72.7
@@ -342,15 +342,15 @@ Material:
     - _DirtBlend2: 0
     - _DirtBrightness: 0
     - _DirtBrightness1: 0.547
-    - _DirtContrast: 0.61
+    - _DirtContrast: 0.73
     - _DirtMultiply: 0
     - _DirtMultiply1: 0.295627
-    - _DirtOverlay: 0.544
+    - _DirtOverlay: 0.36
     - _DirtPlasterPower: 0.438
-    - _DirtRange: 0.082
+    - _DirtRange: 0.739
     - _DirtRo: 0.90294117
     - _DirtRoughness: 0
-    - _DirtSmooth: 0.367
+    - _DirtSmooth: 0
     - _DirtSmoothness: 0.9
     - _DirtSmoothness1: 7.1480064
     - _DirtStrenght: 0.38071212
@@ -359,7 +359,7 @@ Material:
     - _DoubleSidedNormalMode: 2
     - _DstBlend: 0
     - _Edges: 0.47388238
-    - _EdgesOverlay: 0.135
+    - _EdgesOverlay: 0
     - _EdgesStrenght: 0.6596708
     - _EnableFogOnTransparent: 1
     - _Exp: 33.8
@@ -385,7 +385,7 @@ Material:
     - _InsideSmoothness: 0
     - _Int0: 0
     - _Keyword1: 0
-    - _MainSmoothness: 0.244
+    - _MainSmoothness: 0.45
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
@@ -394,7 +394,7 @@ Material:
     - _OverlayDirtStrenght: 0.42682976
     - _PaintAmount: 0.5298843
     - _PaintDetails: 0
-    - _PaintEdgesMultiply: 0.341
+    - _PaintEdgesMultiply: 0
     - _PaintOpacity: 0
     - _PaintSmoothness: 0.582
     - _Parallax: 0.02
@@ -437,11 +437,11 @@ Material:
     - _Substract: 1.88
     - _SurfaceType: 0
     - _Tiling: 5
-    - _TransitionAmount: 0.0325
+    - _TransitionAmount: 0.0107
     - _TransitionBrightness: 1.14
     - _TransitionContrast: 4.923943
     - _TransitionExp: 0.7522764
-    - _TransitionScale: 0.41
+    - _TransitionScale: 1.63
     - _TransparentBackfaceEnable: 0
     - _TransparentCullMode: 2
     - _TransparentSortPriority: 0

@@ -27,7 +27,10 @@ public class idleSwitch : MonoBehaviour
     [SerializeField] private GameObject goal5;
 
     [SerializeField] private GameObject screen;
+    [SerializeField] private GameObject destructionFloor;
+
     private Material screenMaterial;
+    private Material floorMaterial;
 
     private bool switchOn;
 
@@ -37,6 +40,7 @@ public class idleSwitch : MonoBehaviour
         switchOn = false;
 
         screenMaterial = screen.GetComponent<Renderer>().material;
+        floorMaterial = destructionFloor.GetComponent<Renderer>().material;
     }
 
     // Update is called once per frame
@@ -95,10 +99,23 @@ public class idleSwitch : MonoBehaviour
         goal4.SetActive(false);
         goal5.SetActive(false);
         outsideGoals.SetActive(true);
+        workersUpstairs.SetActive(false);
 
         yield return new WaitForSeconds(30);
+        StartCoroutine(DestructionCoroutine());
         curtain.SetTrigger("open");
 
+    }
+
+    IEnumerator DestructionCoroutine()
+    {
+        while (floorMaterial.GetFloat("_DamageAmount") < 1f) {
+            floorMaterial.SetFloat("_DamageAmount", floorMaterial.GetFloat("_DamageAmount")+.01f);
+            yield return new WaitForSeconds(.1f);
+        }
+
+
+        yield return null;
     }
 }
 
