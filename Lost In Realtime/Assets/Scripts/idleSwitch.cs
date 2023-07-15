@@ -46,6 +46,7 @@ public class idleSwitch : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // press space key to leave idle mode and start the experience
          if (Input.GetKeyDown("space"))
         {
             print("space key was pressed");
@@ -55,12 +56,16 @@ public class idleSwitch : MonoBehaviour
         if (switchOn == true) 
         {
 
+            // stop looping the idle audio and transition to main audio
             if (idleSound.timeSamples >= 733000) {
                 idleSound.Stop ();
                 track96.Play ();
                 switchOn = false;
 
+                // trigger to start camera animation
                 cameraPath.SetTrigger("audioSwitched");
+
+                // trigger to start animation, that teleports the main characterinto different positions throughout the experience
                 teleporter.SetTrigger("startTeleport");
                 StartCoroutine(WorkerCoroutine());
                 doors.SetTrigger("audioSwitched");
@@ -71,11 +76,6 @@ public class idleSwitch : MonoBehaviour
 
     IEnumerator WorkerCoroutine()
     {
-
-
-        //Debug.Log("Started Coroutine at timestamp : " + Time.time);
-
-        //yield on a new YieldInstruction that waits for 5 seconds.
         yield return new WaitForSeconds(5);
         workers.SetActive(true);
 

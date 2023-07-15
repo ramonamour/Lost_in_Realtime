@@ -287,7 +287,7 @@ Material:
     - _AlphaCutoffEnable: 1
     - _AlphaDstBlend: 0
     - _AlphaSrcBlend: 1
-    - _BareBrightness: 1.22
+    - _BareBrightness: 1.55
     - _BareConcreteRange: 0.66243684
     - _BareConcreteSmooth: 0.34628615
     - _BareSmoothness: 0.441
