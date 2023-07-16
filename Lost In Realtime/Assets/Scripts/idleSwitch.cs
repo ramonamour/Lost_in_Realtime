@@ -29,6 +29,9 @@ public class idleSwitch : MonoBehaviour
     [SerializeField] private GameObject screen;
     [SerializeField] private GameObject destructionFloor;
 
+    [SerializeField] private GameObject ivy;
+    [SerializeField] private GameObject screenEffects;
+
     private Material screenMaterial;
     private Material floorMaterial;
 
@@ -76,23 +79,30 @@ public class idleSwitch : MonoBehaviour
 
     IEnumerator WorkerCoroutine()
     {
+        // activate workers in foyer
         yield return new WaitForSeconds(5);
         workers.SetActive(true);
 
+        //activate workers outside building
         yield return new WaitForSeconds(20);
         workersOutside.SetActive(true);
 
+        // activate workers upstairs
         yield return new WaitForSeconds(10);
         workersUpstairs.SetActive(true);
         
+        // turn of screen flickering and turn of screenEffects
         yield return new WaitForSeconds(83);
         screenMaterial.SetColor("_Color", Color.black);
         screenMaterial.DisableKeyword("_EMISSION");
         Debug.Log("Emission off");
+        screenEffects.SetActive(false);
         
+        // sink hands in water
         yield return new WaitForSeconds(2);
         sinkingHands.SetTrigger("sink");
 
+        // deactivate all crowd simulation goals inside building and activate goals outside, so workers leave the building
         goal1.SetActive(false);
         goal2.SetActive(false);
         goal3.SetActive(false);
@@ -101,15 +111,21 @@ public class idleSwitch : MonoBehaviour
         outsideGoals.SetActive(true);
         workersUpstairs.SetActive(false);
 
+        // start building destruction effect and grow ivy
         yield return new WaitForSeconds(30);
         StartCoroutine(DestructionCoroutine());
+        ivy.SetActive(true);
+
+        // open digital curtain twin (signal for users)
+        yield return new WaitForSeconds(30);
         curtain.SetTrigger("open");
 
     }
 
     IEnumerator DestructionCoroutine()
     {
-        while (floorMaterial.GetFloat("_DamageAmount") < 1f) {
+        // gradually strengthen destructed look of building
+        while (floorMaterial.GetFloat("_DamageAmount") < .8f) {
             floorMaterial.SetFloat("_DamageAmount", floorMaterial.GetFloat("_DamageAmount")+.01f);
             yield return new WaitForSeconds(.1f);
         }
