@@ -3,3 +3,11 @@ Lost In Realtime/onnxruntime_providers_cuda.dll
 Lost In Realtime/dnn_model_2_0_op11.onnx
 Lost In Realtime/Assets/Plugins/onnxruntime_providers_cuda.dll.meta
 Lost In Realtime/Assets/Plugins/onnxruntime_providers_cuda.dll
+Lost In Realtime/Packages/Microsoft.Azure.Kinect.BodyTracking.ONNXRuntime.1.10.0/lib/native/amd64/release/onnxruntime_providers_shared.dll
+Lost In Realtime/Packages/Microsoft.Azure.Kinect.BodyTracking.ONNXRuntime.1.10.0/lib/native/amd64/release/onnxruntime_providers_tensorrt.dll
+Lost In Realtime/Packages/Microsoft.Azure.Kinect.BodyTracking.ONNXRuntime.1.10.0/lib/native/amd64/release/onnxruntime_providers_cuda.dll
+Lost In Realtime/Packages/Microsoft.Azure.Kinect.BodyTracking.ONNXRuntime.1.10.0/lib/native/amd64/release/onnxruntime.dll
+Lost In Realtime/Packages/Microsoft.Azure.Kinect.BodyTracking.ONNXRuntime.1.10.0/lib/native/amd64/release/directml.dll
+Lost In Realtime/Packages/Microsoft.Azure.Kinect.BodyTracking.1.1.2/Microsoft.Azure.Kinect.BodyTracking.1.1.2.nupkg
+Lost In Realtime/Packages/Microsoft.Azure.Kinect.BodyTracking.1.1.2/content/dnn_model_2_0_lite_op11.onnx
+Lost In Realtime/Packages/Microsoft.Azure.Kinect.BodyTracking.1.1.2/content/dnn_model_2_0_op11.onnx
