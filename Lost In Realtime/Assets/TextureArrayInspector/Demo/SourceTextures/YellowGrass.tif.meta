@@ -101,6 +101,30 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
   spriteSheet:
     serializedVersion: 2
     sprites: []
@@ -120,7 +144,7 @@ TextureImporter:
   pSDShowRemoveMatteOption: 0
   userData: 'TexArr_textureArray:f83feae301b48bd428e444b7fd80abd8
 
-    Hash:150f870cc887d8c6719893904700602a
+    Hash:1583b28c5218a896f53195f3414a939c
 
     TexArr_textureArray_asSource:bcb3ecca3be6ccc489a6407b03175a4d,2299afe3c40833f42af3291830dbd430'
   assetBundleName: 

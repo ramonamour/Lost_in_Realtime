@@ -10,6 +10,8 @@ public class FlickeringEmissive : MonoBehaviour
 
     [SerializeField] AnimationCurve BrightnessCurve;
 
+    private GameObject flickerSwitch;
+
     private Renderer Renderer;
     private List<Material> Materials = new();
     private List<Color> InitialColors = new();
@@ -19,6 +21,7 @@ public class FlickeringEmissive : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        flickerSwitch = GameObject.Find("flickerSwitch");
         Renderer = GetComponent<Renderer>();
         BrightnessCurve.postWrapMode = WrapMode.Loop;
 
@@ -43,7 +46,7 @@ public class FlickeringEmissive : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Flicker && Renderer.isVisible) {
+        if (Flicker && Renderer.isVisible && flickerSwitch.activeSelf) {
             float scaledTime = Time.time * FlickerSpeed;
 
             for (int i = 0; i < Materials.Count; i++)
@@ -56,6 +59,13 @@ public class FlickeringEmissive : MonoBehaviour
                     color.b * Mathf.Pow(2, brightness),
                     color.a
                 );
+                Materials[i].SetColor(EMISSIVE_COLOR_NAME, color);
+            }
+        }
+        if (!flickerSwitch.activeSelf) {
+            for (int i = 0; i < Materials.Count; i++)
+            {
+                Color color = new Color(0, 0, 0);
                 Materials[i].SetColor(EMISSIVE_COLOR_NAME, color);
             }
         }

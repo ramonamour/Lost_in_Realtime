@@ -32,6 +32,8 @@ public class idleSwitch : MonoBehaviour
     [SerializeField] private GameObject ivy;
     [SerializeField] private GameObject screenEffects;
 
+    [SerializeField] private GameObject flickerSwitch;
+    
     private Material screenMaterial;
     private Material floorMaterial;
 
@@ -93,10 +95,8 @@ public class idleSwitch : MonoBehaviour
         
         // turn of screen flickering and turn of screenEffects
         yield return new WaitForSeconds(83);
-        screenMaterial.SetColor("_Color", Color.black);
-        screenMaterial.DisableKeyword("_EMISSION");
-        Debug.Log("Emission off");
         screenEffects.SetActive(false);
+        flickerSwitch.SetActive(false);
         
         // sink hands in water
         yield return new WaitForSeconds(2);
