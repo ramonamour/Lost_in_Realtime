@@ -113,6 +113,8 @@ public class idleSwitch : MonoBehaviour
 
         // start building destruction effect and grow ivy
         yield return new WaitForSeconds(30);
+        workers.SetActive(false);
+        workersOutside.SetActive(false);
         StartCoroutine(DestructionCoroutine());
         ivy.SetActive(true);
 
